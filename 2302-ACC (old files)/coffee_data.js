@@ -1,3 +1,11 @@
+// Project Requirements:
+// 1. Clean the coffee_data.js file.
+
+    // - All prices should be numbers.
+    // - All items should be strings.
+    // - Objects and properties should have commas separating them.
+    // - Connect the coffee_data.js file to the index.js file.
+
 const coffeeMenu = [
     {
         name: "cappuccino",
@@ -45,5 +53,12 @@ const coffeeMenu = [
         seasonal: true,
     }
 ]
+
+const cleanedNumberData = coffeeMenu.map((coffeeObject) => {
+    coffeeObject.price = Number(coffeeObject.price);
+    return coffeeObject;
+});
+
+console.log(cleanedNumberData);
 
 module.exports = coffeeMenu;
